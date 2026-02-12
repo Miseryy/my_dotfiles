@@ -2,3 +2,5 @@
 *.log
 .ssh/
 .gnupg/
+client.yml
+*.json

@@ -1,0 +1,116 @@
+/* ios-glass.rasi - iOS Style Frosted Glass Theme */
+
+configuration {
+    font: "Hack Gen Bold 20"; /* MacならSF Pro、なければSans Bold */
+    show-icons: false;
+    display-drun: "🔎";
+    drun-display-format: "{name}";
+}
+
+* {
+    /* --- iOS Dark Mode Colors --- */
+    
+    /* 全体の背景: かなり透明な黒 (blur前提) */
+    bg-base: #00000085;
+    
+    /* 検索バーの背景: 少し明るいグレー（半透明） */
+    bg-search: #ffffff20;
+    
+    /* 選択色: iOSブルー (鮮やか) */
+    bg-selected: #007AFF;
+    
+    /* テキスト色 */
+    fg-text: #ffffff;
+    fg-sub: #ffffffaa;
+    
+    border-col: #ffffff15; /* うっすら白い境界線 */
+}
+
+window {
+    transparency: "real";
+    background-color: @bg-base;
+    text-color: @fg-text;
+    
+    /* iPhoneっぽい大きな角丸 */
+    border-radius: 24px;
+    
+    /* ガラスの境界線 */
+    border: 2px;
+    border-color: @border-col;
+    
+    width: 1240;
+    height: 800px;
+    
+    /* 画面中央に配置 */
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: transparent;
+    padding: 20px;
+    children: [inputbar, listview];
+}
+
+/* --- 検索バー (カプセル型) --- */
+inputbar {
+    background-color: @bg-search;
+    border-radius: 12px; /* カプセル形状 */
+    text-color: @fg-text;
+    padding: 12px 16px;
+    margin: 0px 0px 20px 0px; /* リストとの隙間 */
+    children: [prompt, entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @fg-text;
+    margin: 0px 10px 0px 0px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg-text;
+    placeholder: "Search";
+    placeholder-color: @fg-sub;
+    cursor: text;
+}
+
+/* --- リスト表示 --- */
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 6;
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg-text;
+    border-radius: 10px;
+    padding: 12px;
+    spacing: 10px;
+}
+
+element-icon {
+    size: 32px; /* Retinaなので大きめに */
+    background-color: transparent;
+}
+
+element-text {
+    vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
+    font: inherit;
+}
+
+/* --- 選択時の挙動 --- */
+element selected {
+    /* iOSブルーで強調 */
+    background-color: @bg-selected;
+    text-color: #ffffff;
+    
+    /* 選択時だけ少し枠をつけるかはお好みで */
+    /* border: 1px; border-color: #ffffff50; */
+}
