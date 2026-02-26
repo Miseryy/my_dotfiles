@@ -1,6 +1,9 @@
+__pycache__
 *.local
 *.log
 .ssh/
 .gnupg/
 client.yml
 *.json
+/.config/qutebrowser/qsettings/QtProject.conf
+/.config/qutebrowser/bookmarks/urls
