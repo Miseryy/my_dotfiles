@@ -1,0 +1,49 @@
+/* 全体の背景 */
+.control-center {
+  background: rgba(30, 30, 46, 0.8);
+  border-radius: 15px;
+  border: 2px solid #89b4fa;
+  margin: 10px;
+}
+
+/* Bluetoothステータスラベルのスタイル */
+#bt-status {
+    background: #1e1e2e;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 12px;
+    border: 1px solid #89b4fa;
+    color: #cdd6f4;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ボタン風に並べるウィジェット */
+.widget-buttons-grid {
+    padding: 10px;
+    margin: 5px;
+    background: #1e1e2e;
+    border-radius: 12px;
+}
+
+.widget-buttons-grid > box > button {
+    background: #313244;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 10px;
+    color: #cdd6f4;
+}
+
+.widget-buttons-grid > box > button:hover {
+    background: #45475a;
+}
+
+/* 通知本体 */
+.notification {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  margin: 6px 12px;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border: 1px solid #89b4fa;
+}
