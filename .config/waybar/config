@@ -1,0 +1,69 @@
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "include":["modules.json"],
+    "layer": "top",
+
+    "position": "top",
+
+    // "height": 10,
+
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+
+    "spacing": 5, // Gaps between modules (4px)
+
+    "modules-left": [
+        "custom/sp3",
+        "custom/thunar",
+        "custom/sp3",
+        "custom/rofi",
+        "niri/workspaces",
+        // "hyprland/submap",
+        // "temperature",
+        // "idle_inhibitor",
+        // "mpd",
+        "custom/spotify"
+    ],
+    "modules-center": [
+        // "hyprland/window",
+        "clock#Mydate"
+        // "custom/weather"
+        //"custom/gammastep"
+    ],
+    "modules-right": [
+		"network",
+        "custom/storage",
+        "memory",
+        "cpu",
+        //"pulseaudio",
+        "backlight",
+        "wireplumber",
+        // "custom/bluetooth_battery",
+        // "custom/screenshot_t",
+        "battery",
+        "tray",
+        "custom/notifications",
+        "custom/power"
+    ],
+    "niri/workspaces": {
+        "format": "{index}",
+        "format-icons": {
+            // Named workspaces
+            // (you need to configure them in niri)
+            "browser": "",
+            "discord": "",
+            "chat": "<b></b>",
+            // Icons by state
+            "active": "",
+            "default": ""
+        }
+    },
+    "output":[
+        "*"
+    ]
+
+}
