@@ -1,0 +1,10 @@
+# [preview]
+# preview_protocol = "sixel"
+# image_delay = 30
+# max_width = 1500
+# max_height = 1500
+[preview]
+preview_protocol = "sixel"
+image_delay = 100
+# ターミナルのグリッドに合わせる設定
+sixel_fraction = 1
