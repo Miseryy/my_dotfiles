@@ -1,0 +1,1 @@
+feh --geometry 1000x700 --scale-down --auto-zoom --image-bg black --draw-filename --sort mtime
