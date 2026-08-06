@@ -9,3 +9,5 @@ client.yml
 /.config/qutebrowser/bookmarks/urls
 /.spacemacs.d/.spacemacs.env
 /.config/quickshell/noctalia-shell
+.env
+.spotify-token.json

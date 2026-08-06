@@ -23,6 +23,16 @@ Spotify モジュールは `scripts/spotify/spotawaybar.py` を使用します�
 python3 ~/.config/quickshell/scripts/spotify/spotawaybar.py auth
 ```
 
+### Spotifyが表示されない場合
+
+再生中にもかかわらずSpotifyモジュールが表示されない場合は、認証エラーにより非表示になっている可能性があります。特に `scripts/spotify/.spotify-token.json` が存在しない場合は、上記の `auth` コマンドを実行してブラウザでSpotify認証を完了してください。認証後は最大5秒程度で表示が戻ります。
+
+現在の状態は次のコマンドで確認できます。
+
+```sh
+python3 ~/.config/quickshell/scripts/spotify/spotawaybar.py status
+```
+
 ## 確認
 
 ```sh

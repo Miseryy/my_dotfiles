@@ -1,3 +1,4 @@
+import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
 import QtQuick
@@ -8,8 +9,6 @@ Item {
     id: root
 
     // passive項目も含め、StatusNotifierItemをWaybarと同じく横並びにする。
-    required property var barWindow
-
     implicitWidth: row.implicitWidth
     implicitHeight: Theme.pillHeight
     visible: SystemTray.items && SystemTray.items.values && SystemTray.items.values.length > 0
@@ -42,6 +41,15 @@ Item {
                     source: trayItem.modelData.icon
                 }
 
+                QsMenuAnchor {
+                    id: menuAnchor
+
+                    menu: trayItem.modelData.menu
+                    anchor.item: trayItem
+                    anchor.edges: Edges.Bottom | Edges.Left
+                    anchor.gravity: Edges.Bottom | Edges.Right
+                }
+
                 MouseArea {
                     // 操作はトレイ項目自身へ転送し、アプリ固有の挙動を維持する。
                     anchors.fill: parent
@@ -52,8 +60,7 @@ Item {
                         } else if (mouse.button === Qt.MiddleButton) {
                             trayItem.modelData.secondaryActivate();
                         } else if (mouse.button === Qt.RightButton && trayItem.modelData.hasMenu) {
-                            const point = trayItem.mapToItem(null, 0, trayItem.height);
-                            trayItem.modelData.display(root.barWindow, Math.round(point.x), Math.round(point.y));
+                            menuAnchor.open();
                         }
                     }
                     onWheel: wheel => trayItem.modelData.scroll(wheel.angleDelta.y, false)

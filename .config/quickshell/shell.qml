@@ -1,3 +1,6 @@
+//@ pragma UseQApplication
+//@ pragma IconTheme Adwaita
+
 import Quickshell
 import QtQuick
 import "services" as Services

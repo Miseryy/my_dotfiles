@@ -8,7 +8,6 @@ PanelWindow {
     id: bar
 
     // 値の監視は shell.qml 側の共有サービスに任せ、バーは配置だけを担当する。
-    required property var screen
     required property var systemStatsService
     required property var diskService
     required property var networkStatsService
@@ -65,6 +64,6 @@ PanelWindow {
         SystemStatsWidget { service: bar.systemStatsService }
         BluetoothWidget {}
         BatteryWidget {}
-        TrayWidget { barWindow: bar }
+        TrayWidget {}
     }
 }
